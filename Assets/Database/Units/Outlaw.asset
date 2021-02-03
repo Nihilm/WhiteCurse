@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56822286ade0d914caf7ff93321516ad, type: 3}
+  m_Name: Outlaw
+  m_EditorClassIdentifier: 
+  template: {fileID: 0}
+  displayName: Outlaw
+  prefab: {fileID: 4467042005790567288, guid: ee2ba9ee10544074aa7c01de256f6087, type: 3}
+  agency: {fileID: 11400000, guid: c29d1f6d325bffb478c587ca0f6e0732, type: 2}
+  inventories:
+  - {fileID: 11400000, guid: fe3027e3381e5904a95ecef84d513e46, type: 2}
+  lifecycle: {fileID: 11400000, guid: 78f4f9d543dd1b24faa5ffd8299f2f44, type: 2}
+  attributes:
+  - value: 1
+    attribute: {fileID: 11400000, guid: f4261a9aacc818c40b3adea17a67cc53, type: 2}
+  - value: 2
+    attribute: {fileID: 11400000, guid: 7258775ba99e2bf4fbca7f38d743071a, type: 2}
+  - value: 10
+    attribute: {fileID: 11400000, guid: 0d8d982457989234588b825654ff95bd, type: 2}

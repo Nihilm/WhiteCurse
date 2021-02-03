@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f254405815525488815e1043c34661, type: 3}
+  m_Name: Restoration
+  m_EditorClassIdentifier: 
+  template: {fileID: 11400000, guid: 06860ddf8e58b7f46bb0c72e912ea1e5, type: 2}
+  displayName: Restoration
+  description: 
+  icon: {fileID: 21300000, guid: baaac5e5629645442b706f91cbe0b4bf, type: 3}
+  actions: []
+  inventories: []
+  requirements: []
+  prefab: {fileID: 0}
+  targetingArea:
+    range: 6
+    arc: 0
+    raycast: 0
+    filter: 3
+  cost:
+  - attribute: {fileID: 11400000, guid: 7258775ba99e2bf4fbca7f38d743071a, type: 2}
+    threshold: 1
+    consume: 2
+  effects:
+  - {fileID: 11400000, guid: c6ccf8f1ef0ba7a45b71513202f04a61, type: 2}
+  modifiers: []
+  count: 4
+  tierMatrix: 00000000010000000100000002000000
+  modifierMatrix: 03000000

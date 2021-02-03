@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f254405815525488815e1043c34661, type: 3}
+  m_Name: LungeThrust
+  m_EditorClassIdentifier: 
+  template: {fileID: 11400000, guid: bf55cfe6f7d13dc46b3ea380cf4082ca, type: 2}
+  displayName: Lunge Thrust
+  description: 
+  icon: {fileID: 21300000, guid: f6ae0666f120e6d4c871e5ae96ff7711, type: 3}
+  actions: []
+  inventories: []
+  requirements: []
+  prefab: {fileID: 4150339786387979543, guid: d0613aa9f9989a443aa3130724c10852, type: 3}
+  targetingArea:
+    range: 2
+    arc: 0
+    raycast: 1
+    filter: 4
+  cost:
+  - attribute: {fileID: 11400000, guid: 7258775ba99e2bf4fbca7f38d743071a, type: 2}
+    threshold: 1
+    consume: 2
+  effects:
+  - {fileID: 11400000, guid: 86de8646c5009e84abef8acf3e558782, type: 2}
+  - {fileID: 11400000, guid: 86de8646c5009e84abef8acf3e558782, type: 2}
+  modifiers:
+  - {fileID: 11400000, guid: 2a35e91179e9b5c44ac12a6c419b00bc, type: 2}
+  - {fileID: 11400000, guid: 791c632c6b773b24c89c0fa5011a6f18, type: 2}
+  count: 4
+  tierMatrix: 000000000100000000000000010000000000000000000000010000000100000000000000000000000100000001000000000000000100000001000000010000000100000001000000000000000000000001000000010000000200000000000000
+  modifierMatrix: 000000000000000000000000040000000400000000000000040000000000000000000000040000000000000000000000

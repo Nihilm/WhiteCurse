@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f254405815525488815e1043c34661, type: 3}
+  m_Name: MeltingArrow
+  m_EditorClassIdentifier: 
+  template: {fileID: 11400000, guid: 4537200d09b5e7841bad26b7da74e15a, type: 2}
+  displayName: Melting Arrow
+  description: 
+  icon: {fileID: 21300000, guid: 07f4c1bcfaaf82f4bb2140e53b3f890b, type: 3}
+  actions: []
+  inventories: []
+  requirements: []
+  prefab: {fileID: 4150339786387979543, guid: c1de7fa382f07e04e9f236b729890594, type: 3}
+  targetingArea:
+    range: 4
+    arc: 0
+    raycast: 1
+    filter: 12
+  cost:
+  - attribute: {fileID: 11400000, guid: 7258775ba99e2bf4fbca7f38d743071a, type: 2}
+    threshold: 1
+    consume: 2
+  effects:
+  - {fileID: 11400000, guid: 9f9d5d9af63efd649b7373c7c7fa21b2, type: 2}
+  - {fileID: 11400000, guid: 5fc803be0e920844ab90b7fba3675bf3, type: 2}
+  modifiers:
+  - {fileID: 11400000, guid: 20afd5d410ffafb4c9dc404519dbea05, type: 2}
+  count: 4
+  tierMatrix: 000000000100000000000000010000000000000000000000020000000000000000000000010000000300000002000000000000000000000001000000010000000000000001000000
+  modifierMatrix: 00000000000000000c000000040000000400000000000000

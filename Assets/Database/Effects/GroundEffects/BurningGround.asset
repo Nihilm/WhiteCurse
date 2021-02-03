@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7285a933bbf51ae4daf6246d1074198d, type: 3}
+  m_Name: BurningGround
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4467042005790567288, guid: f8ca2effb3c63334caef9d4c790d3135, type: 3}
+  snapshot: 0
+  mergeStrategies: []
+  tiers: 010000000200000003000000

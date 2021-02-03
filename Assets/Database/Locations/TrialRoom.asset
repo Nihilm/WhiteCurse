@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eda87acaec76b4b9f35505064a6c5f, type: 3}
+  m_Name: TrialRoom
+  m_EditorClassIdentifier: 
+  template: {fileID: 0}
+  displayName: Trial Room
+  prefab: {fileID: 5210637450390921783, guid: d05af88eef3b6294089334dc06387f94, type: 3}
+  rooms:
+  - {fileID: 11400000, guid: 6186a500683e08541a8a78e2735f4d62, type: 2}
+  - {fileID: 11400000, guid: 34b55361038afef4590e8751baaad0d2, type: 2}
+  - {fileID: 11400000, guid: 95cf9f446e71c504fa3944074bf9f461, type: 2}
+  columns: 6
+  rows: 3
+  units:
+  - {fileID: 11400000, guid: 22163a921685c904ea9d44027e83854c, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 54f9a571dddf97a46a995a2a08347ad5, type: 2}
+  - {fileID: 11400000, guid: fa1ef7ccb52b2094e8b01131ff98883f, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4a9e5093112cc2746a9c7499cf03c3ea, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: e0333c9fb2c4e5c4284ddbef5a54de03, type: 2}
+  - {fileID: 11400000, guid: 439446c1e8cd343468f5d57c90d955fb, type: 2}
+  - {fileID: 11400000, guid: e0333c9fb2c4e5c4284ddbef5a54de03, type: 2}
+  - {fileID: 11400000, guid: 439446c1e8cd343468f5d57c90d955fb, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

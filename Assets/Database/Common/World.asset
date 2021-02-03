@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17229284922ec124cb9b2138e2e185b3, type: 3}
+  m_Name: World
+  m_EditorClassIdentifier: 
+  template: {fileID: 0}
+  agents:
+  - {fileID: 11400000, guid: cfe0929554829fe4aac05574ce66eaef, type: 2}
+  - {fileID: 11400000, guid: c29d1f6d325bffb478c587ca0f6e0732, type: 2}
+  areas:
+    positions:
+    - {x: 80, y: 160}
+    - {x: 480, y: 160}
+    links:
+    - {x: 0, y: 1}
+    zoom: 1
+    pan: {x: 0, y: 0}
+    nodes:
+    - {fileID: 11400000, guid: 4a17c2bd19bd3a445b62f86714562d51, type: 2}
+    - {fileID: 0}
