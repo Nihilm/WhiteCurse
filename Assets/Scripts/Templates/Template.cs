@@ -6,6 +6,7 @@
     }
     public interface IAgent {
         AgentTemplate Agency{get;}
+        WorldState World{get;}
         void Enter(WorldState world);
     }
     public interface IAction {

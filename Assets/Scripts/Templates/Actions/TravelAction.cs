@@ -8,32 +8,21 @@
         [SerializeReference] private LocationState nextLocation;
         public static TravelAction Create(
             IAgent agent, LocationState prevLocation, LocationState nextLocation
-        ) => new TravelAction(){
-            agent = agent,
-            prevLocation = prevLocation,
-            nextLocation = nextLocation
-        };
+        ){
+            if(prevLocation != null && prevLocation.order != null && prevLocation.order != agent) return null;
+            return new TravelAction(){
+                agent = agent,
+                prevLocation = prevLocation,
+                nextLocation = nextLocation
+            };
+        }
         public void Apply(WorldState world){
-            UnityEngine.Random.InitState(0x1b41 + nextLocation.area.seed + nextLocation.Index);
             Debug.Log($"Navigate to {nextLocation.area.template.displayName}/{nextLocation.template.displayName}");
+            UnityEngine.Random.InitState(0x1b41 + nextLocation.area.seed + nextLocation.Index);
             TransferUnits(agent, prevLocation, nextLocation);
 
-            if(nextLocation.order == null) nextLocation.order = agent;
-            //world.AddAction(TurnAction.Create(nextLocation, ))
-
-            for(int i = 0; i < nextLocation.TileCount; i++){
-                UnitState unit = nextLocation[i] as UnitState;
-                if(unit == null) continue;
-                if(unit.Agency == agent.Agency){
-                    //TODO remove that. Only apply debuf
-                    var stamina = unit.GetNodes<StaminaState>().First();
-                    stamina.Modify(stamina.Capacity - stamina.Value);
-                }else{
-                    var stamina = unit.GetNodes<StaminaState>().First();
-                    stamina.Modify(-stamina.Value);
-                }
-            }
-
+            if(nextLocation.order == null)
+                world.AddAction(TurnAction.Create(nextLocation, null, agent));
         }
         void TransferUnits(IAgent agent, LocationState prevLocation, LocationState nextLocation){
             if(prevLocation == null) return;

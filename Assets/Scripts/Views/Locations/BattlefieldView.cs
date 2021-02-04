@@ -150,8 +150,11 @@ public class BattlefieldView : MonoBehaviour {
             activeUnit = null;
             OnLocationUpdate(-1); //TODO just to update highlight
         }
-        if(unit == null || unit.Agency != player) return;
+        if(unit == null) return;
+
+        if(unit.Agency is PlayerTemplate || unit.Agency is NPCTemplate)
         foreach(var inventory in unit.GetNodes<InventoryState>()) inventory.template.OpenInventory(inventory);
+        if(unit.Agency != player) return;
         activeUnit = unit;
         OnLocationUpdate(-1); //TODO just to update highlight
     }

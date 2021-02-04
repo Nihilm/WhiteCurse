@@ -12,6 +12,7 @@
         [SerializeField] public AITemplate template;
         [NonSerialized] WorldState world;
         public AgentTemplate Agency => template;
+        public WorldState World => world;
         public void Enter(WorldState world){
             this.world = world;
             world.actionEvent += OnAction;

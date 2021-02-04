@@ -46,4 +46,8 @@ public class InventoryView : MonoBehaviour {
         for(int i = openedInventory.Count; i < slots.Count; i++)
             slots[i].SetActive(false);
     }
+    public void CloseInventory(){
+        if(openedInventory == null) return;
+        openedInventory.template.OpenInventory(null);
+    }
 }

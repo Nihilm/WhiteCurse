@@ -21,7 +21,8 @@
         [SerializeField] public TargetingArea targetingArea;
         [SerializeField] public int[] tiers = new int[0];
         public override int TierCount => tiers.Length;
-        public override string Description(int tier) => --tier < 0 ? "" : $"{tiers[tier]} times on {triggerType.ToString()}";
+        public override string Description(int tier) => --tier < 0 ? "" :
+        $"{tiers[tier]} times on {triggerType.ToString()}";
 
         public override IEnumerable<IAction> Apply(
             ModifierNode node, int tier,

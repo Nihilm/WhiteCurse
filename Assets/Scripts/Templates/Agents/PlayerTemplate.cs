@@ -27,8 +27,10 @@
             if(previousLocation != null && previousLocation.area == nextArea
             && previousLocation.area.graph[previousLocation.Index, location.Index] == 0)
                 return;
+            var action = TravelAction.Create(this.state, previousLocation, location);
+            if(action == null) return;
             state.activeLocation = location;
-            state.world.AddAction(TravelAction.Create(this.state, previousLocation, location));
+            state.world.AddAction(action);
             navigationEvent?.Invoke(previousLocation);
         }
         #endregion
@@ -78,6 +80,7 @@
     [System.Serializable] public class PlayerState : IAgent {
         [SerializeField] public PlayerTemplate template;
         public AgentTemplate Agency => template;
+        public WorldState World => world;
         [SerializeReference] public InventoryState shared;
 
         [NonSerialized] public WorldState world;

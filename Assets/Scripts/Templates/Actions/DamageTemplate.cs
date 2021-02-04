@@ -17,7 +17,7 @@
         [SerializeField] public double[] multipliers = new double[]{0};
 
         public override int TierCount => multipliers.Length;
-        public override string Description(int tier) => $"{100*multipliers[tier]}% {displayName}";
+        public override string Description(int tier) => $"<b>{100*multipliers[tier]}%</b> <color=#ff0000ff>{displayName}</color>";
 
         public override IAction Create(IAgent agent, ITarget source, IContainer target, int index, int tier){
             UnitState targetUnit = target?[index] as UnitState;
