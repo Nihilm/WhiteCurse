@@ -2080,7 +2080,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3308,7 +3308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106.5, y: 28.3}
+  m_AnchoredPosition: {x: 106.5, y: 28.25}
   m_SizeDelta: {x: 200.11365, y: -225.76349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4534656303901724696

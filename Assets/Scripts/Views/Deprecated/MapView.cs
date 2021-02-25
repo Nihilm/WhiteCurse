@@ -1,3 +1,60 @@
+// private Texture2D RenderGeometryMap(_Algorithms.NodeGeometry geometry, List<Vector2Int> connectors, int padding){
+//         var bounds = _Algorithms.RectilinearPolygon.CalculateBounds(geometry.rectangles);
+//         Texture2D mapTexture = new Texture2D(bounds.width+2*padding, bounds.height+2*padding, TextureFormat.ARGB32, false);
+//         mapTexture.wrapMode = TextureWrapMode.Clamp;
+//         mapTexture.filterMode = FilterMode.Bilinear;
+//         Color[] colors = new Color[mapTexture.width * mapTexture.height];
+//         foreach(var rectangle in geometry.rectangles)
+//         for(int x = rectangle.min.x; x < rectangle.max.x; x++)
+//         for(int y = rectangle.min.y; y < rectangle.max.y; y++)
+//         colors[(x - bounds.min.x + padding) + (y - bounds.min.y + padding) * mapTexture.width] = new Color(0,1,0,1);
+//         foreach(var connector in connectors)
+//         colors[(connector.x - bounds.min.x + padding) + (connector.y - bounds.min.y + padding) * mapTexture.width] = new Color(1,1,0,1);
+//         mapTexture.SetPixels(colors);
+//         mapTexture.Apply();
+//         return mapTexture;
+//     }
+//     private Sprite RenderNodeGeometry(_Algorithms.NodeGeometry geometry, List<Vector2Int> connectors){
+//         int tileSize = 64; int padding = 1;
+//         //https://www.shadertoy.com/view/WdfBD7
+
+//         Texture2D mapTexture = RenderGeometryMap(geometry, connectors, padding);
+//         int width = mapTexture.width-2*padding, height = mapTexture.height-2*padding;
+
+//         RenderTexture renderTexture = RenderTexture.GetTemporary(width*tileSize, height*tileSize, 0, RenderTextureFormat.ARGB32);
+//         RenderTexture.active = renderTexture;
+//         if(brushMaterial == null) brushMaterial = new Material(brushShader);
+
+//         float scaleX = (float)width / (float)mapTexture.width;
+//         float scaleY = (float)height / (float)mapTexture.height;
+//         GL.LoadIdentity();
+//         GL.LoadPixelMatrix(
+//             tileSize * scaleX,
+//             renderTexture.width - tileSize * scaleX,
+//             renderTexture.height - tileSize * scaleY,
+//             tileSize * scaleY
+//         );
+//         Graphics.DrawTexture(new Rect(0, 0, renderTexture.width, renderTexture.height), mapTexture, brushMaterial);
+
+//         Texture2D texture = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.ARGB32, false, true);
+//         RenderTexture.active = renderTexture;
+//         texture.ReadPixels(new Rect(0, 0, texture.width, texture.height), 0, 0);
+//         texture.Apply();
+
+//         RenderTexture.active = null;
+//         renderTexture.DiscardContents();
+//         RenderTexture.ReleaseTemporary(renderTexture);
+        
+//         return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero, tileSize);
+//     }
+
+
+
+
+
+
+
+
 // using System.Collections.Generic;
 // using UnityEngine;
 // using UnityEngine.UI;

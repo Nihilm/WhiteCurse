@@ -120,17 +120,6 @@
             for(int y = area.min.y; y <= area.max.y; y++)
             yield return new Vector2Int(x, y);
         }
-        public IEnumerable<OrthogonalConnector> SampleConnectors(NodeGeometry neighbour){
-            foreach(var sourceConnector in connectors)
-            foreach(var targetConnector in neighbour.connectors){
-                if(sourceConnector.direction != targetConnector.direction * -1) continue;
-                var intersection = OrthogonalConnector.Intersection(sourceConnector.bounds, targetConnector.bounds);
-                if(intersection.width < 0 || intersection.height < 0) continue;
-                for(int x = intersection.min.x; x <= intersection.max.x; x++)
-                for(int y = intersection.min.y; y <= intersection.max.y; y++)
-                yield return new OrthogonalConnector(new RectInt(x, y, 0, 0), sourceConnector.direction);
-            }
-        }
     }
     public class OrthogonalConnector {
         public RectInt bounds;

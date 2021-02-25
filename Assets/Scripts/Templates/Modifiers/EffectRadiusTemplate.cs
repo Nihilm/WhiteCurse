@@ -30,7 +30,10 @@
             for(int x = -radiusInt; x <= radiusInt; x++)
             for(int y = -radiusInt; y <= radiusInt; y++){
                 if(x*x + y*y > radiusSquared) continue;
-                int tile = y + x * location.template.rows;
+                int c = x + center.x;
+                int r = y + center.y;
+                if(c < 0 || r < 0 || c >= location.template.columns || r >= location.template.rows) continue;
+                int tile = r + c * location.template.rows;
                 foreach(var action in node.Propagate(agent, source, location, tile))
                     yield return action;
             }

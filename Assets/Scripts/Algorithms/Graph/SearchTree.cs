@@ -138,6 +138,25 @@
             }
             return new RectInt(min, max - min);
         }
+        public IEnumerable<Vector2Int> SampleConnectors(int index){
+            foreach(int neighbour in graph.Neighbours(index)){
+                NodeGeometry source = geometries[index], target = geometries[neighbour];
+                foreach(var sourceConnector in source.connectors)
+                foreach(var targetConnector in target.connectors){
+                    if(sourceConnector.direction != targetConnector.direction * -1) continue;
+                    var intersection = OrthogonalConnector.Intersection(sourceConnector.bounds, targetConnector.bounds);
+                    if(intersection.width < 0 || intersection.height < 0) continue;
+                    for(int x = intersection.min.x; x <= intersection.max.x; x++)
+                    for(int y = intersection.min.y; y <= intersection.max.y; y++){
+                        Vector2Int offset = new Vector2Int(
+                            sourceConnector.direction[0] == -1 ? -1 : 0,
+                            sourceConnector.direction[1] == 1 ? -1 : 0
+                        );
+                        yield return new Vector2Int(x, y) + offset;
+                    }
+                }
+            }
+        }
     }
     public class ProceduralGenerator {
         public int branchingFactor = 4;

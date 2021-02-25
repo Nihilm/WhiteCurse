@@ -7,7 +7,9 @@
         [SerializeField] private LocationTemplate template;
         [SerializeField] public string displayName;
         [SerializeField] public GameObject prefab;
+
         [SerializeField] public RoomGeometry[] rooms = new RoomGeometry[0];
+        [SerializeField] public Sprite icon;
         
         [SerializeField,Min(0)] public int columns;
         [SerializeField,Min(0)] public int rows;
