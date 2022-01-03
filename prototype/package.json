@@ -1,0 +1,10 @@
+{
+  "name": "prototype",
+  "version": "0.0.0",
+  "scripts": {},
+  "dependencies": {
+    "@pixi/particle-emitter": "^5.0.2",
+    "gsap": "^3.9.1",
+    "pixi.js": "^6.2.1"
+  }
+}
