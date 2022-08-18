@@ -2,9 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>[ Pale ]</title>
+    <title>[ Demo ]</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <style>
+        body {
+            overflow-y: scroll;
+        }
         html, body {
             margin:0;
             padding:0;
@@ -19,6 +22,9 @@
             max-height: 100%;
             box-sizing: border-box;
             border: 1px solid white;
+            left: 0; right: 0;
+            margin: auto;
+            display: block;
         }
         body > div {
             width: 100%;
@@ -29,30 +35,34 @@
         ul {
             list-style-type: '◆';
         }
+        li[draggable]:hover {
+            background-color: #c9144e;
+        }
         b, strong {
             color: #34ebb7;
             text-transform: uppercase;
         }
-        i, em {
+        i {
             font-style: normal;
             color: #c9144e;
         }
+        em {
+            font-style: normal;
+            color: #abeb5e;
+            text-decoration: underline;
+        }
+        strong {
+            font-style: normal;
+        }
+        u {
+            font-style: normal;
+            text-decoration: none;
+            color: #5ebce6;
+        }
     </style>
-    <script src="node_modules/pixi.js/dist/browser/pixi.min.js"></script>
-    <script src="node_modules/@pixi/particle-emitter/dist/pixi-particles.min.js"></script>
-    <script src="node_modules/gsap/dist/gsap.min.js"></script>
-    <script src="assets/assets.js"></script>
-
-    <script src="modules/math.js"></script>
-    <script src="modules/overlay.js"></script>
-    <script src="modules/effects.js"></script>
-    <script src="modules/unit.js"></script>
-    <script src="modules/skills.js"></script>
-    <script src="modules/items.js"></script>
-    <script src="modules/agents.js"></script>
-    <script src="modules/battlefield.js"></script>
+    <script src="dist/assets.js"></script>
+    <script src="dist/index.js"></script>
 </head>
 <body>
-    <script src="app.js"></script>
 </body>
 </html>
