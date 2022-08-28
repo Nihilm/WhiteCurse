@@ -1,3 +1,4 @@
 # White Curse
 
-[Demo](http://nihilm.github.io/whitecurse/index.html)
+- **[Demo](https://nihilm.github.io/WhiteCurse/)**
+- **[GDD](https://docs.google.com/spreadsheets/d/1YLX4blkQswIWp5HIK2qbsPuTmg4xyILG-U58jX--tZ8/edit#gid=0)**
